@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 18%;
+
+    --primary: 152 44% 49%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 14 89% 70%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 120 20% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 8 100% 71%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 120 10% 90%;
+    --input: 120 10% 90%;
+    --ring: 152 44% 49%;
+
+    --radius: 0.75rem;
+
+    /* Custom MediBora tokens */
+    --teal: 152 44% 49%;
+    --coral: 14 89% 70%;
+    --slate: 0 0% 18%;
+    --cream: 40 33% 97%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(152 44% 49%), hsl(152 44% 40%));
+    --gradient-coral: linear-gradient(135deg, hsl(14 89% 70%), hsl(14 89% 60%));
+    --gradient-hero: linear-gradient(180deg, hsl(152 20% 98%) 0%, hsl(0 0% 100%) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.06);
+    --shadow-card: 0 8px 30px -8px hsl(0 0% 0% / 0.08);
+    --shadow-button: 0 4px 14px -4px hsl(152 44% 49% / 0.35);
+  }
+
+  .dark {
+    --background: 0 0% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 152 44% 49%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 14 89% 70%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 8 100% 71%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 152 44% 49%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-coral {
+    background: var(--gradient-coral);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-button {
+    box-shadow: var(--shadow-button);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
